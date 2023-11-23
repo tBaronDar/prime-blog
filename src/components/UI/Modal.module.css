@@ -2,17 +2,21 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.515);
   z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.modal {
-  border: none;
-  border-radius: 6px;
-
-  padding: 0;
-  overflow: hidden;
+.container {
+  display: block;
+  position: fixed;
   z-index: 1;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  left: 45%;
+  top: 5rem;
 }

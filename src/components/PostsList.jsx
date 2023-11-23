@@ -1,14 +1,16 @@
 import DUMMY_POSTS from "../assets/DUMMY_DATA";
 import Post from "./Post";
+import { useLoaderData } from "react-router-dom";
 
 import styles from "./PostsList.module.css";
 
 function PostLists() {
-  console.log(DUMMY_POSTS);
+  const loaderData = useLoaderData();
+  const dataArray = Object.values(loaderData);
 
   return (
     <ul className={styles.posts}>
-      {DUMMY_POSTS.map((item) => (
+      {dataArray.map((item) => (
         <Post
           id={item.id}
           author={item.author}
@@ -21,3 +23,13 @@ function PostLists() {
 }
 
 export default PostLists;
+
+export async function loader() {
+  const response = await fetch(
+    "https://prime-blog1-default-rtdb.europe-west1.firebasedatabase.app/posts.json/"
+  );
+
+  const data = await response.json();
+
+  return data;
+}

@@ -8,6 +8,8 @@ import WelcomePage from "./pages/Welcome";
 import PostsPage from "./pages/Posts";
 import PostDetails from "./components/PostDetails";
 import NewPostPage from "./pages/NewPost";
+import { action as newPostAction } from "./components/NewPostForm";
+import { loader as postsLoader } from "./components/PostsList";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/posts",
     element: <PostsPage />,
-    children: [{ path: "new-post", element: <NewPostPage /> }],
+    loader: postsLoader,
+    children: [
+      { path: "new-post", element: <NewPostPage />, action: newPostAction },
+    ],
   },
 ]);
 
