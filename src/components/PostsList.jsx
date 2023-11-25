@@ -1,4 +1,3 @@
-import DUMMY_POSTS from "../assets/DUMMY_DATA";
 import Post from "./Post";
 import { useLoaderData } from "react-router-dom";
 

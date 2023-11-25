@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 
 import "./App.css";
 
-import WelcomePage from "./pages/Welcome";
+import HomePage from "./pages/Home";
 import PostsPage from "./pages/Posts";
 import PostDetails from "./components/PostDetails";
 import NewPostPage from "./pages/NewPost";
@@ -14,7 +14,7 @@ import { loader as postsLoader } from "./components/PostsList";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <WelcomePage />,
+    element: <HomePage />,
   },
   {
     path: "/posts",

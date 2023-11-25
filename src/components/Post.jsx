@@ -6,6 +6,8 @@ function Post(props) {
     <Card className={styles.post}>
       <p>{props.body}</p>
       <h4>{props.author}</h4>
+      <button className={styles.actions}>Del</button>
+      <button className={styles.actions}>Edit</button>
     </Card>
   );
 }

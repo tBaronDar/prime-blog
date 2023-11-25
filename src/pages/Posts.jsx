@@ -3,10 +3,10 @@ import PostLists from "../components/PostsList";
 
 function PostsPage() {
   return (
-    <>
+    <div>
       <MainNavigation />
       <PostLists />
-    </>
+    </div>
   );
 }
 

@@ -1,0 +1,8 @@
+.backdrop {
+  background-color: blueviolet;
+  top: 0;
+  height: 8rem;
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
