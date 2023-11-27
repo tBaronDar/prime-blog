@@ -7,9 +7,21 @@ function PostLists() {
   const loaderData = useLoaderData();
   const dataArray = Object.values(loaderData);
 
+  const idArray = Object.keys(loaderData);
+
+  let helperArray = [];
+
+  for (let i = 0; i < dataArray.length; i++) {
+    helperArray[i] = {
+      author: dataArray[i].author,
+      body: dataArray[i].body,
+      id: idArray[i],
+    };
+  }
+
   return (
     <ul className={styles.posts}>
-      {dataArray.map((item) => (
+      {helperArray.map((item) => (
         <Post
           id={item.id}
           author={item.author}

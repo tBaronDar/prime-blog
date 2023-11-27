@@ -6,9 +6,11 @@ import "./App.css";
 
 import HomePage from "./pages/Home";
 import PostsPage from "./pages/Posts";
-import PostDetails from "./components/PostDetails";
 import NewPostPage from "./pages/NewPost";
-import { action as newPostAction } from "./components/NewPostForm";
+import PostDetailsPage, {
+  loader as postDetailsLoader,
+} from "./pages/PostDetails";
+import { action as newPostAction } from "./components/PostForm";
 import { loader as postsLoader } from "./components/PostsList";
 
 const router = createBrowserRouter([
@@ -22,6 +24,11 @@ const router = createBrowserRouter([
     loader: postsLoader,
     children: [
       { path: "new-post", element: <NewPostPage />, action: newPostAction },
+      {
+        path: ":postId",
+        element: <PostDetailsPage />,
+        loader: postDetailsLoader,
+      },
     ],
   },
 ]);

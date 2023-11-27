@@ -1,10 +1,10 @@
-import NewPostForm from "../components/NewPostForm";
+import PostForm from "../components/PostForm";
 import Modal from "../components/UI/Modal";
 
 function NewPostPage() {
   return (
     <Modal>
-      <NewPostForm />
+      <PostForm method="POST" />
     </Modal>
   );
 }

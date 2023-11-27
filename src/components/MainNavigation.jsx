@@ -5,9 +5,20 @@ import styles from "./MainNavigation.module.css";
 function MainNavigation() {
   return (
     <>
-      <header className={styles.backdrop}>
-        <NavLink to="/posts">Home</NavLink>
-        <NavLink to="/posts/new-post">Create Post</NavLink>
+      <header className={styles.navBar}>
+        <ul>
+          <li>
+            <NavLink to="/posts" end>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/posts/new-post">Create Post</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+        </ul>
       </header>
       <main>
         <Outlet />

@@ -1,8 +1,26 @@
-.backdrop {
-  background-color: blueviolet;
+.navBar {
+  background-color: rgba(186, 43, 226, 0.535);
   top: 0;
+  left: 0;
   height: 8rem;
   width: 100%;
   margin: 0;
-  position: relative;
+  position: fixed;
+}
+
+.navBar ul {
+  list-style: none;
+}
+
+.navBar li {
+  display: inline;
+}
+
+.navBar a {
+  font-size: larger;
+  text-decoration: none;
+  background-color: #115d9f;
+  margin: 1px;
+  stroke: aqua;
+  padding: 6px;
 }

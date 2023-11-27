@@ -1,9 +1,9 @@
 import { Form, useNavigate, redirect } from "react-router-dom";
 
-import styles from "./NewPostForm.module.css";
+import styles from "./PostForm.module.css";
 import Card from "./UI/Card";
 
-function NewPostForm(props) {
+function PostForm(props) {
   const navigate = useNavigate();
   function onCancel() {
     navigate("..");
@@ -11,16 +11,26 @@ function NewPostForm(props) {
 
   return (
     <Card>
-      <Form method="POST">
+      <Form method={props.method}>
         <div>
           <label htmlFor="body">Your thoughts</label>
         </div>
         <div>
-          <textarea rows="20" name="body" id="body" />
+          <textarea
+            rows="20"
+            name="body"
+            id="body"
+            defaultValue={props?.body || ""}
+          />
         </div>
         <div>
           <label htmlFor="author">by...</label>
-          <input type="text" name="author" id="author" />
+          <input
+            type="text"
+            name="author"
+            id="author"
+            defaultValue={props?.author || ""}
+          />
         </div>
         <div>
           <button onClick={onCancel}>Cancel</button>
@@ -31,21 +41,20 @@ function NewPostForm(props) {
   );
 }
 
-export default NewPostForm;
+export default PostForm;
 
 export async function action({ request, params }) {
   const data = await request.formData();
-
+  console.log(params);
   const postData = {
     author: data.get("author"),
     body: data.get("body"),
-    id: Math.floor(Math.random() * 100000),
   };
 
   const response = await fetch(
     "https://prime-blog1-default-rtdb.europe-west1.firebasedatabase.app/posts.json/",
     {
-      method: "POST",
+      method: "sda",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(postData),
     }

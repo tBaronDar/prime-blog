@@ -1,19 +1,10 @@
 :root {
-  margin: 0;
   font-family: "Lato", serif;
-  background: #063b97;
+  background: #022a71;
   color: coral;
   text-align: center;
 }
 
 * {
   box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  background-color: #119f3e;
-  padding: 1rem;
-  margin: 1rem;
-  top: 6rem;
 }

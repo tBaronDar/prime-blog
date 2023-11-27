@@ -1,5 +1,7 @@
 .posts {
+  top: 8rem;
+  position: fixed;
   list-style: none;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
