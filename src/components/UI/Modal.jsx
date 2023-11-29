@@ -7,7 +7,7 @@ function Modal(props) {
   const navigate = useNavigate();
 
   function onClose() {
-    navigate("..");
+    navigate("/posts");
   }
 
   return (

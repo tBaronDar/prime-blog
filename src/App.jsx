@@ -5,30 +5,39 @@ import ReactDOM from "react-dom/client";
 import "./App.css";
 
 import HomePage from "./pages/Home";
-import PostsPage from "./pages/Posts";
+
+import PostsPage, { loader as postsLoader } from "./pages/Posts";
+
 import NewPostPage from "./pages/NewPost";
+
 import PostDetailsPage, {
   loader as postDetailsLoader,
+  deleteAction,
 } from "./pages/PostDetails";
-import { action as newPostAction } from "./components/PostForm";
-import { loader as postsLoader } from "./components/PostsList";
+import EditPostPage from "./pages/EditPost";
+import { action as postUpdateAction } from "./components/PostForm";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
   },
+
   {
     path: "/posts",
     element: <PostsPage />,
     loader: postsLoader,
     children: [
-      { path: "new-post", element: <NewPostPage />, action: newPostAction },
       {
         path: ":postId",
-        element: <PostDetailsPage />,
+        id: "post-details",
         loader: postDetailsLoader,
+        children: [
+          { index: true, element: <PostDetailsPage />, action: deleteAction },
+          { path: "edit", element: <EditPostPage />, action: postUpdateAction },
+        ],
       },
+      { path: "new-post", element: <NewPostPage />, action: postUpdateAction },
     ],
   },
 ]);

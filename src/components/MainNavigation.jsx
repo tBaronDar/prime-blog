@@ -13,7 +13,7 @@ function MainNavigation() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/posts/new-post">Create Post</NavLink>
+            <NavLink to="new-post">Create Post</NavLink>
           </li>
           <li>
             <NavLink to="/about">About</NavLink>

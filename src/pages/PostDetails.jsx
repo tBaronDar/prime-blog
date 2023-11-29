@@ -1,16 +1,15 @@
-import PostForm from "../components/PostForm";
+import ViewPostDetails from "../components/ViewPostDetails";
 import Modal from "../components/UI/Modal";
 
-import { useLoaderData, useParams } from "react-router-dom";
+import { useRouteLoaderData, useParams, redirect } from "react-router-dom";
 
 function PostDetailsPage() {
-  const data = useLoaderData();
+  const data = useRouteLoaderData("post-details");
   const params = useParams();
 
   return (
     <Modal>
-      <PostForm
-        method="PATCH"
+      <ViewPostDetails
         author={data.author}
         body={data.body}
         id={params.postId}
@@ -34,4 +33,21 @@ export async function loader({ params }) {
   const data = response.json();
 
   return data;
+}
+
+export async function deleteAction({ params, request }) {
+  const id = params.postId;
+
+  const response = await fetch(
+    "https://prime-blog1-default-rtdb.europe-west1.firebasedatabase.app/posts/" +
+      id +
+      ".json/",
+    {
+      method: request.method,
+    }
+  );
+
+  console.log("quiqui");
+
+  return redirect("/posts");
 }
