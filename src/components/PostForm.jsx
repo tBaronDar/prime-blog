@@ -2,11 +2,11 @@ import { Form, useNavigate, redirect, useParams } from "react-router-dom";
 
 import styles from "./PostForm.module.css";
 import Card from "./UI/Card";
+import { checkmark, backArrowSmall } from "../assets/svg-icons";
 
 function PostForm(props) {
   const navigate = useNavigate();
   const params = useParams();
-  const id = params.postId;
 
   function onCancel() {
     navigate("/posts");
@@ -39,9 +39,9 @@ function PostForm(props) {
         </div>
         <div>
           <button onClick={onCancel} type="cancel">
-            Cancel
+            {backArrowSmall}
           </button>
-          <button type="submit">Post</button>
+          <button type="submit">{checkmark}</button>
         </div>
       </Form>
     </Card>

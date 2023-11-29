@@ -1,7 +1,17 @@
 .posts {
-  top: 8rem;
-  position: fixed;
   list-style: none;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  margin: 0;
+  text-align: center;
+  position: fixed;
+  top: 9rem;
+}
+
+.container {
+  max-width: 30rem;
+  margin: 2rem auto;
+  position: fixed;
+  top: 9rem;
 }

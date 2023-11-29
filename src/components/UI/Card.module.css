@@ -1,18 +1,12 @@
 .card {
-  margin: 1rem;
+  margin: auto;
+  margin-left: 2rem;
   padding: 0rem;
-  background-color: #3b18ca;
+  background-color: #434f5f;
   border-radius: 8px;
   color: navajowhite;
   height: fit-content;
   width: fit-content;
-}
-
-.card button {
-  background-color: rgb(50, 171, 205);
-  border-radius: 4px;
-  padding: 0;
-  height: 1.8rem;
-  width: 1.8rem;
-  margin-left: 0.5rem;
+  min-width: 10rem;
+  min-height: 10rem;
 }

@@ -20,16 +20,18 @@ function PostLists() {
   }
 
   return (
-    <ul className={styles.posts}>
-      {helperArray.map((item) => (
-        <Post
-          id={item.id}
-          author={item.author}
-          body={item.body}
-          key={item.id}
-        />
-      ))}
-    </ul>
+    <div className={styles.container}>
+      <ul className={styles.posts}>
+        {helperArray.map((item) => (
+          <Post
+            id={item.id}
+            author={item.author}
+            body={item.body}
+            key={item.id}
+          />
+        ))}
+      </ul>
+    </div>
   );
 }
 
