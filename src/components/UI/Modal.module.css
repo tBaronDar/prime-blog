@@ -12,11 +12,11 @@
 
 .container {
   display: block;
-  position: fixed;
+  position: absolute;
   z-index: 12;
   width: fit-content;
   height: fit-content;
   align-items: center;
-  left: 35%;
+  left: 40vw;
   top: 5rem;
 }

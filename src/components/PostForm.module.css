@@ -1,3 +1,8 @@
+.card {
+  position: absolute;
+  right: 10rem;
+}
+
 .actions {
   background-color: transparent;
   border: 0;

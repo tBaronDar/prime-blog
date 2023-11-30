@@ -12,7 +12,7 @@ function PostForm(props) {
   }
 
   return (
-    <Card>
+    <Card className={styles.card}>
       <Form method={props.method}>
         <div>
           <label htmlFor="body">Your thoughts</label>

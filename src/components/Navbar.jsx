@@ -8,7 +8,7 @@ function Navbar() {
       <ul>
         <li>
           <NavLink to="/posts" end>
-            Home
+            Posts
           </NavLink>
         </li>
         <li>

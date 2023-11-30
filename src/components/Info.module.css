@@ -1,20 +1,28 @@
 .container {
-  position: relative;
+  position: absolute;
   text-align: center;
-  width: 700px;
-  height: 5rem;
+  width: 50rem;
+  height: 40rem;
+  margin: auto;
+  top: 10rem;
+  left: 30vw;
+  background-color: #434f5f;
+  border-radius: 8px;
 }
 
 .container section {
-  min-width: 700px;
-  min-height: 200px;
   max-height: 250px;
   margin-top: 4rem;
+}
+
+.container article {
+  padding: 2rem;
 }
 
 .links {
   margin: 1rem auto;
   list-style: none;
+  padding: 2rem;
 }
 
 .links li {
