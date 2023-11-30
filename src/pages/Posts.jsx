@@ -1,14 +1,7 @@
-import { redirect, useNavigate } from "react-router-dom";
-import MainNavigation from "../components/MainNavigation";
 import PostLists from "../components/PostsList";
 
 function PostsPage() {
-  return (
-    <div>
-      <MainNavigation />
-      <PostLists />
-    </div>
-  );
+  return <PostLists />;
 }
 
 export default PostsPage;

@@ -1,9 +1,8 @@
 .post {
-  height: 10rem;
-  width: 10rem;
   align-items: normal;
   justify-items: center;
   overflow: hidden;
+  position: relative;
 }
 
 .post a {
@@ -17,4 +16,8 @@
 
 .actions a {
   margin: 1rem;
+}
+
+.actions :hover {
+  scale: 1.1;
 }

@@ -1,4 +1,4 @@
-import { Form, useNavigate, redirect, useParams } from "react-router-dom";
+import { Form, useNavigate, redirect } from "react-router-dom";
 
 import styles from "./PostForm.module.css";
 import Card from "./UI/Card";
@@ -6,7 +6,6 @@ import { checkmark, backArrowSmall } from "../assets/svg-icons";
 
 function PostForm(props) {
   const navigate = useNavigate();
-  const params = useParams();
 
   function onCancel() {
     navigate("/posts");
@@ -25,23 +24,27 @@ function PostForm(props) {
             name="body"
             id="body"
             defaultValue={props?.body || ""}
+            className={styles.inputs}
           />
         </div>
+        <label htmlFor="author">by:</label>
         <div>
-          <label htmlFor="author">by...</label>
           <input
             required
             type="text"
             name="author"
             id="author"
             defaultValue={props?.author || ""}
+            className={styles.inputs}
           />
         </div>
         <div>
-          <button onClick={onCancel} type="cancel">
+          <button onClick={onCancel} type="cancel" className={styles.actions}>
             {backArrowSmall}
           </button>
-          <button type="submit">{checkmark}</button>
+          <button type="submit" className={styles.actions}>
+            {checkmark}
+          </button>
         </div>
       </Form>
     </Card>

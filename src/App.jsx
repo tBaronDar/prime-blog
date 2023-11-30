@@ -1,15 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import "./App.css";
-
 import HomePage from "./pages/Home";
-
 import PostsPage, { loader as postsLoader } from "./pages/Posts";
-
 import NewPostPage from "./pages/NewPost";
-
 import PostDetailsPage, {
   loader as postDetailsLoader,
   deleteAction,
@@ -17,30 +12,52 @@ import PostDetailsPage, {
 import EditPostPage from "./pages/EditPost";
 import { action as postUpdateAction } from "./components/PostForm";
 import AboutPage from "./pages/About";
+import Layout from "./pages/Layout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "/posts",
-    element: <PostsPage />,
-    loader: postsLoader,
+    element: <Layout />,
     children: [
       {
-        path: ":postId",
-        id: "post-details",
-        loader: postDetailsLoader,
+        index: true,
+        element: <HomePage />,
+      },
+      { path: "/about", element: <AboutPage /> },
+      {
+        path: "new-post",
+        element: <NewPostPage />,
+        action: postUpdateAction,
+      },
+      {
+        path: "/posts",
         children: [
-          { index: true, element: <PostDetailsPage />, action: deleteAction },
-          { path: "edit", element: <EditPostPage />, action: postUpdateAction },
+          {
+            index: true,
+            element: <PostsPage />,
+            loader: postsLoader,
+          },
+          {
+            path: ":postId",
+            id: "post-details",
+            loader: postDetailsLoader,
+            children: [
+              {
+                index: true,
+                element: <PostDetailsPage />,
+                action: deleteAction,
+              },
+              {
+                path: "edit",
+                element: <EditPostPage />,
+                action: postUpdateAction,
+              },
+            ],
+          },
         ],
       },
-      { path: "new-post", element: <NewPostPage />, action: postUpdateAction },
     ],
   },
-  { path: "/about", element: <AboutPage /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

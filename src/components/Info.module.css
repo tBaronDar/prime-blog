@@ -1,26 +1,33 @@
-.welcome {
-  margin: 7rem auto;
-  top: 8rem;
+.container {
   position: relative;
-  display: list-item;
-  list-style: none;
   text-align: center;
   width: 700px;
+  height: 5rem;
 }
 
-.welcome section {
-  position: relative;
+.container section {
   min-width: 700px;
   min-height: 200px;
   max-height: 250px;
   margin-top: 4rem;
-  top: 2rem;
 }
 
-.welcome a {
-  position: relative;
+.links {
+  margin: 1rem auto;
+  list-style: none;
+}
+
+.links li {
+  display: inline;
+}
+
+.actions a {
   text-align: center;
   text-decoration: none;
-  top: 3rem;
+  max-height: 1rem;
   color: inherit;
+}
+
+.actions :hover {
+  scale: 1.2;
 }

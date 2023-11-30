@@ -1,7 +1,15 @@
 .actions {
-  color: darkolivegreen;
+  background-color: transparent;
+  border: 0;
+  margin: 0.5rem;
+  padding: 0;
+  cursor: pointer;
 }
 
-.overall {
-  background-color: aqua;
+.actions :hover {
+  scale: 1.2;
+}
+
+.inputs {
+  background-color: burlywood;
 }

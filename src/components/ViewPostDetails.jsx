@@ -15,15 +15,15 @@ function ViewPostDetails({ body, author, id }) {
   }
   return (
     <Card>
-      <div>
+      <div className={styles.container}>
         <label htmlFor="body">Your thoughts</label>
         <p>{body}</p>
       </div>
-      <div>
+      <div className={styles.author}>
         <label htmlFor="author">by...</label>
-        <p>{author}</p>
+        <h3>{author}</h3>
       </div>
-      <ul className={styles.actionsList}>
+      <ul className={styles.actions}>
         <li>
           <Link to="/posts">{backArrowSmall}</Link>
         </li>
