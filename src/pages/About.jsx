@@ -1,4 +1,4 @@
-import Info from "../components/info";
+import Info from "../components/Info";
 
 function AboutPage() {
   return <Info />;
