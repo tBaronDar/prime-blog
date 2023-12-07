@@ -1,8 +1,27 @@
 .post {
-  align-items: normal;
-  justify-items: center;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  padding: 1.6rem;
+  background-color: #434f5f;
+  border-radius: 12px;
+
   position: relative;
+
+  width: 18rem;
+  height: 18rem;
+  margin: 0;
+}
+
+.post p {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  max-width: 15rem;
+  max-height: 14rem;
+  text-wrap: balance;
 }
 
 .post a {
@@ -14,10 +33,28 @@
   text-align: center;
 }
 
-.actions a {
-  margin: 1rem;
+.body {
+  margin: 0;
+  padding: 0;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.author {
+  position: absolute;
+  bottom: 2rem;
+  font-style: italic;
+}
+
+.actions {
+  position: absolute;
+  margin: 0;
+  bottom: 1rem;
 }
 
 .actions :hover {
-  scale: 1.1;
+  scale: 1.35;
+  opacity: 0.6;
+  transition: scale 0.5s ease-out;
 }

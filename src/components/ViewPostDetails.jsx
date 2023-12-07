@@ -1,6 +1,7 @@
 import { Link, useSubmit } from "react-router-dom";
-import Card from "./UI/Card";
-//
+import backArrow from "../assets/back-arrow.svg";
+import pencil from "../assets/pencil-icon.svg";
+import deleteBin from "../assets/recycle-bin.svg";
 
 import styles from "./ViewPostDetails.module.css";
 
@@ -14,29 +15,31 @@ function ViewPostDetails({ body, author, id }) {
     }
   }
   return (
-    <Card>
-      <div className={styles.container}>
+    <dialog open className={styles.container}>
+      <div className={styles.body}>
         <label htmlFor="body">Your thoughts</label>
         <p>{body}</p>
       </div>
+
       <div className={styles.author}>
         <label htmlFor="author">by...</label>
         <h3>{author}</h3>
       </div>
-      <ul className={styles.actions}>
-        <li>
-          <Link to="/posts">barrow</Link>
-        </li>
-        <li>
-          <Link to="edit">pen</Link>
-        </li>
-        <li>
-          <button type="delete" onClick={startDeleting}>
-            bin
-          </button>
-        </li>
-      </ul>
-    </Card>
+
+      <div className={styles.actions}>
+        <Link to="/posts">
+          <img src={backArrow} alt="back" />
+        </Link>
+
+        <Link to="edit">
+          <img src={pencil} alt="edit" />
+        </Link>
+
+        <button type="delete" onClick={startDeleting}>
+          <img src={deleteBin} alt="bin" />
+        </button>
+      </div>
+    </dialog>
   );
 }
 

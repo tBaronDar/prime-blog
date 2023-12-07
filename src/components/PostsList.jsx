@@ -23,16 +23,17 @@ function PostLists() {
     }
 
     content = (
-      <div className={styles.container}>
-        <ul className={styles.posts}>
+      <div className={styles.posts}>
+        <ul>
           {helperArray.map((item) => (
-            <Post
-              id={item.id}
-              author={item.author}
-              body={item.body}
-              key={item.id}
-              className={styles.post}
-            />
+            <li key={item.id}>
+              <Post
+                id={item.id}
+                author={item.author}
+                body={item.body}
+                className={styles.post}
+              />
+            </li>
           ))}
         </ul>
       </div>

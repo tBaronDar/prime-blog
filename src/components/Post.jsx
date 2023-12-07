@@ -1,26 +1,18 @@
 import { Link } from "react-router-dom";
 import styles from "./Post.module.css";
-import Card from "./UI/Card";
-import { messages } from "../assets/svg-icons";
+import edit from "../assets/messages-icon.svg";
 
 function Post(props) {
   return (
-    <Card>
-      <div className={styles.post}>
-        <Link to={`/posts/${props.id}`}>
-          <div>
-            <p>{props.body}</p>
-            <h4>{props.author}</h4>
-          </div>
-        </Link>
-      </div>
-
-      <div>
-        <Link to={`/posts/${props.id}`} className={styles.actions}>
-          {messages}
-        </Link>
-      </div>
-    </Card>
+    <div className={styles.post}>
+      <Link to={`/posts/${props.id}`} className={styles.body}>
+        <p>{props.body}</p>
+      </Link>
+      <h4 className={styles.author}>{props.author}</h4>
+      <Link to={`/posts/${props.id}`} className={styles.actions}>
+        <img src={edit} alt="edit" />
+      </Link>
+    </div>
   );
 }
 

@@ -8,13 +8,7 @@ function PostDetailsPage() {
   const params = useParams();
 
   return (
-    <Modal>
-      <ViewPostDetails
-        author={data.author}
-        body={data.body}
-        id={params.postId}
-      />
-    </Modal>
+    <ViewPostDetails author={data.author} body={data.body} id={params.postId} />
   );
 }
 
