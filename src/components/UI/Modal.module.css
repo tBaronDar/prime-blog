@@ -17,6 +17,6 @@
   width: fit-content;
   height: fit-content;
   align-items: center;
-  left: 40vw;
-  top: 5rem;
+
+  grid-area: data;
 }

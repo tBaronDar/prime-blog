@@ -1,6 +1,6 @@
 import { Link, useSubmit } from "react-router-dom";
 import Card from "./UI/Card";
-import { backArrowSmall, deleteBin, pencil } from "../assets/svg-icons";
+//
 
 import styles from "./ViewPostDetails.module.css";
 
@@ -25,14 +25,14 @@ function ViewPostDetails({ body, author, id }) {
       </div>
       <ul className={styles.actions}>
         <li>
-          <Link to="/posts">{backArrowSmall}</Link>
+          <Link to="/posts">barrow</Link>
         </li>
         <li>
-          <Link to="edit">{pencil}</Link>
+          <Link to="edit">pen</Link>
         </li>
         <li>
           <button type="delete" onClick={startDeleting}>
-            {deleteBin}
+            bin
           </button>
         </li>
       </ul>

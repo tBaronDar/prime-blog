@@ -5,7 +5,7 @@ function Layout() {
   return (
     <>
       <Navbar />
-      <main style={{ top: "8rem" }}>
+      <main>
         <Outlet />
       </main>
     </>

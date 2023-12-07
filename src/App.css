@@ -1,5 +1,12 @@
-:root {
-  font-family: "Lato", serif;
+body {
+  font-family: "Ubuntu", Arial;
   background: #2a3038;
   color: coral;
+}
+
+main {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  display: grid;
+  grid-template-areas: ". data .";
 }

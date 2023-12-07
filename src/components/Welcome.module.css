@@ -1,27 +1,26 @@
 .welcome {
-  margin: 7rem auto;
-  top: 1rem;
-  position: relative;
-  display: list-item;
+  grid-area: data;
+
   list-style: none;
   text-align: center;
-  width: 700px;
-  min-height: 200px;
-  max-height: 250px;
 }
 
 .welcome section {
-  position: relative;
   margin-top: 1rem;
   margin-bottom: 5rem;
-  top: 2rem;
 }
 
 .welcome a {
-  position: relative;
   text-align: center;
   text-decoration: none;
-  top: 7rem;
+
   color: inherit;
-  left: 2rem;
+}
+
+.card {
+  text-align: center;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #434f5f;
+  border-radius: 8px;
 }

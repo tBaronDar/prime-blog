@@ -4,11 +4,7 @@ import Modal from "../components/UI/Modal";
 import { redirect } from "react-router-dom";
 
 function NewPostPage() {
-  return (
-    <Modal>
-      <PostForm method="POST" />
-    </Modal>
-  );
+  return <PostForm method="POST" />;
 }
 
 export default NewPostPage;

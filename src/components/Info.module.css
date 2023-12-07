@@ -1,41 +1,47 @@
 .container {
-  position: absolute;
+  grid-area: data;
+  display: flex;
+  flex-direction: column;
+
   text-align: center;
-  width: 50rem;
-  height: 40rem;
-  margin: auto;
-  top: 10rem;
-  left: 30vw;
+  justify-content: center;
+  align-content: center;
+
   background-color: #434f5f;
-  border-radius: 8px;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+
+  border-radius: 12px;
 }
 
-.container section {
-  max-height: 250px;
-  margin-top: 4rem;
+.actions {
+  display: flex;
+
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
 }
 
-.container article {
-  padding: 2rem;
+article {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.links {
-  margin: 1rem auto;
-  list-style: none;
-  padding: 2rem;
+img {
+  vertical-align: bottom;
+  object-fit: contain;
 }
 
-.links li {
-  display: inline;
+.back a {
+  display: inline-block;
 }
 
-.actions a {
-  text-align: center;
-  text-decoration: none;
-  max-height: 1rem;
-  color: inherit;
+.back img {
+  height: 3rem;
 }
 
-.actions :hover {
-  scale: 1.2;
+.back :hover,
+.actions a :hover {
+  scale: 1.35;
+  opacity: 0.6;
+  transition: scale 0.5s ease-out;
 }

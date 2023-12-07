@@ -1,20 +1,60 @@
-.card {
-  position: absolute;
-  right: 10rem;
+.modal {
+  text-align: center;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #434f5f;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+.modal ::backdrop {
+  background-color: black;
+  opacity: 0.75;
 }
 
 .actions {
-  background-color: transparent;
-  border: 0;
-  margin: 0.5rem;
-  padding: 0;
-  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.actions :hover {
-  scale: 1.2;
+.buttons {
+  background-color: transparent;
+  margin-top: 1.5rem;
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+}
+
+.buttons :hover {
+  scale: 1.35;
+  opacity: 0.6;
+  transition: scale 0.5s ease-out;
+}
+
+.buttons img {
+  object-fit: contain;
+  height: 3rem;
 }
 
 .inputs {
+  padding: 0.5rem;
   background-color: burlywood;
+  min-width: 25rem;
+  font-family: inherit;
+  border-radius: 12px;
+
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.labels {
+  color: coral;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 501px) {
+  .inputs {
+    min-width: 10rem;
+    font-size: 1rem;
+  }
 }

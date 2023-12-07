@@ -1,8 +1,8 @@
 import { Form, useNavigate, redirect } from "react-router-dom";
+import backArrow from "../assets/back-arrow.svg";
+import checkmark from "../assets/checkmark.svg";
 
 import styles from "./PostForm.module.css";
-import Card from "./UI/Card";
-import { checkmark, backArrowSmall } from "../assets/svg-icons";
 
 function PostForm(props) {
   const navigate = useNavigate();
@@ -12,22 +12,26 @@ function PostForm(props) {
   }
 
   return (
-    <Card className={styles.card}>
+    <dialog open className={styles.modal}>
       <Form method={props.method}>
         <div>
-          <label htmlFor="body">Your thoughts</label>
+          <label htmlFor="body" className={styles.labels}>
+            Your thoughts
+          </label>
         </div>
         <div>
           <textarea
             required
-            rows="20"
+            rows="15"
             name="body"
             id="body"
             defaultValue={props?.body || ""}
             className={styles.inputs}
           />
         </div>
-        <label htmlFor="author">by:</label>
+        <label htmlFor="author" className={styles.labels}>
+          by:
+        </label>
         <div>
           <input
             required
@@ -38,16 +42,16 @@ function PostForm(props) {
             className={styles.inputs}
           />
         </div>
-        <div>
-          <button onClick={onCancel} type="cancel" className={styles.actions}>
-            {backArrowSmall}
+        <div className={styles.actions}>
+          <button onClick={onCancel} type="cancel" className={styles.buttons}>
+            <img src={backArrow} alt="backArrow" />
           </button>
-          <button type="submit" className={styles.actions}>
-            {checkmark}
+          <button type="submit" className={styles.buttons}>
+            <img src={checkmark} alt="checkmark" />
           </button>
         </div>
       </Form>
-    </Card>
+    </dialog>
   );
 }
 
