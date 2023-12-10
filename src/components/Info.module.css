@@ -6,10 +6,14 @@
   text-align: center;
   justify-content: center;
   align-content: center;
+  max-width: clamp(40rem, 60rem, 100rem);
+  margin: auto;
 
   background-color: #434f5f;
   padding-top: 5rem;
   padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   border-radius: 12px;
 }

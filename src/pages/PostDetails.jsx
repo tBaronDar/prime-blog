@@ -1,5 +1,4 @@
 import ViewPostDetails from "../components/ViewPostDetails";
-import Modal from "../components/UI/Modal";
 
 import { useRouteLoaderData, useParams, redirect } from "react-router-dom";
 

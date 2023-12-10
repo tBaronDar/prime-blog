@@ -1,7 +1,7 @@
 .modal {
   text-align: center;
-  align-items: center;
-  padding: 1.5rem;
+
+  padding: clamp(1rem, 1.2rem, 1.6rem);
   background-color: #434f5f;
   border-radius: 12px;
   margin: 0 auto;
@@ -19,7 +19,7 @@
 
 .buttons {
   background-color: transparent;
-  margin-top: 1.5rem;
+  margin-top: 1.4rem;
   padding: 0;
   cursor: pointer;
   border: 0;
@@ -33,23 +33,26 @@
 
 .buttons img {
   object-fit: contain;
-  height: 3rem;
+  height: clamp(1.8rem, 2.5rem, 3rem);
 }
 
 .inputs {
-  padding: 0.5rem;
+  padding: 0.4rem;
   background-color: burlywood;
   min-width: 25rem;
   font-family: inherit;
   border-radius: 12px;
+  border-style: groove;
+  border: #434f5f;
 
   text-align: center;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 1.2rem, 1.4rem);
 }
 
 .labels {
   color: coral;
   font-size: 1.5rem;
+  padding: 1rem;
 }
 
 @media (max-width: 501px) {

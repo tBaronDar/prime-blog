@@ -12,17 +12,21 @@ function Info() {
       <h1>Themis Darelis</h1>
 
       <article>
-        This is my first attemp to create and host a website after completing a
-        React.js course.
+        This is my first attempt to create and host a website after completing a
+        React.js course on Udemy.com.
       </article>
 
       <article>
         The website was created using Vite.Js and its main purpose is for me to
-        practice SPA routing using react and react-router-dom.
+        practice SPA routing using react and react-router-dom. In later stages
+        thought, a lot of css was added in order to make it a bit easier on the
+        eyes. The hosting and the static database containing the posts was
+        realized with Firebase.
       </article>
 
       <article>
-        The hosting and the static database was realized with Firebase.
+        Thank you for checking out this page, please consider paying a visit to
+        my social medias from the links below.
       </article>
 
       <div className={styles.actions}>

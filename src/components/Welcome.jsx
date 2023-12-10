@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import Card from "./UI/Card";
 import styles from "./Welcome.module.css";
 
 function Welcome() {
@@ -8,8 +7,10 @@ function Welcome() {
       <section className={styles.card}>
         <h1>Welcome</h1>
         <p>
-          This is a test app. You can post your thoughts here. The posts can be
-          edited and deleted without any authentication.
+          This is a test webpage and it was created for educational purposes.
+          You can post your thoughts here. Your posts will remain online and
+          they can be viewed, edited and deleted by anyone without any
+          authentication.
         </p>
       </section>
 

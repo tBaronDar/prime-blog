@@ -22,7 +22,7 @@ function PostForm(props) {
         <div>
           <textarea
             required
-            rows="15"
+            rows="14"
             name="body"
             id="body"
             defaultValue={props?.body || ""}

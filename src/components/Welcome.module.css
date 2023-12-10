@@ -1,8 +1,9 @@
 .welcome {
   grid-area: data;
-
+  max-width: clamp(40rem, 60rem, 100rem);
   list-style: none;
   text-align: center;
+  margin: auto;
 }
 
 .welcome section {

@@ -1,5 +1,4 @@
 import PostForm from "../components/PostForm";
-import Modal from "../components/UI/Modal";
 
 import { redirect } from "react-router-dom";
 
